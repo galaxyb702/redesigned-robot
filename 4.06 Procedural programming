@@ -1,0 +1,165 @@
+def greet():
+
+    print("Welcome to the Battle Royale")
+
+    print("Game Tournament Registration")
+
+ 
+
+greet()
+
+ 
+
+def main():
+
+    print("")
+
+    print("************MAIN MENU**************")
+
+    print("""
+
+          1: Find pre-registered player
+
+          2: Find number of a specific player
+
+                  3: Print list of players
+
+                  4: Quit/Log Out
+
+ 
+
+          Please enter your choice: """)
+
+    selection = int(input("Enter choice: "))
+
+    if selection == 1:
+
+        search()
+
+    elif selection == 2:
+
+        findPlayerNumber()
+
+    elif selection == 3:
+
+        printList()
+
+    elif selection ==4:
+
+        quit
+
+    else:
+
+        print("Invalid choice. Enter 1, 2, or 3")
+
+        menu()
+
+        
+
+def search():
+
+     
+
+    import csv
+
+    player = input("What is the name of the pre-registered player?")
+
+    found = False
+
+    with open("battle_royale.csv", "rt") as f:
+
+        reader = csv.reader(f, delimiter=",") 
+
+        for row in reader:
+
+            for field in row:
+                print (row)
+                if field == player:
+
+                    found = True
+
+                    
+
+        if found:
+
+            print("Yes, " + player + " is in the database")
+
+            print("Would you like to race at that time?")
+
+            print("")
+
+            print("Thank you, we have scheduled you to run at 600.")
+
+        else:
+
+            print("No, there is no player by that name")
+
+ 
+
+def findPlayerNumber():
+
+    import csv
+
+ 
+
+    with open("battle_royale.csv") as csvfile:
+
+        readCSV = csv.reader(csvfile, delimiter=",")
+
+        players = []
+
+        numbers = []
+
+        for row in readCSV:
+
+            player = row[1]
+
+            number = row[2]
+
+ 
+
+            players.append(player)
+
+            numbers.append(number)
+
+ 
+
+        print(players)
+
+        print(numbers)
+
+ 
+
+        whatPlayer = input("What player do you wish to know the number of?:")
+
+        playersName = players.index(whatPlayer)
+
+        theNumber = numbers[playersName]
+
+        print(whatPlayer+ (str(" is number: ") +theNumber))
+
+ 
+
+ 
+
+def printList():
+
+    import csv
+
+    with open("battle_royale.csv", "rt") as csvfile:
+
+        readCSV = csv.reader(csvfile, delimiter=",")
+
+        for row in readCSV:
+
+            print(row)
+
+    # Close input file
+
+    csvfile.close()
+
+ 
+
+ 
+
+main()
