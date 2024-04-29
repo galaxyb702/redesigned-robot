@@ -1,0 +1,63 @@
+# Answer Key Lesson 4.04
+
+# <student's first and last name>
+
+# <the date>
+
+# sun_data.csv file is needed to run this program
+
+ 
+
+def greet():
+
+    print("Welcome to the 5k Race for Charity")
+
+    print("We are a not-for-profit organization that")
+
+    print("specializes in helping those in need.")
+
+    
+
+greet()
+
+ 
+
+def main():
+
+    import csv
+
+ 
+
+    time = input("Please enter a time to search")
+
+    found = False
+
+    with open('sun_data.csv', 'rt') as f:
+
+        reader = csv.reader(f, delimiter=',') 
+
+        for row in reader:
+
+            for field in row:
+
+                if field == time:
+
+                    found = True
+
+                    
+
+    if found:
+
+        print("Yes, " + time + " is in the database")
+
+        print("Would you like to race at that time?")
+
+        print("")
+
+        print("Thank you, we have scheduled you to run at 600.")
+
+    else:
+
+        print("No, the sun doesn't rise at that time")
+
+main()
