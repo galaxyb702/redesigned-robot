@@ -1,0 +1,303 @@
+# <student's first and last name>
+
+# <the date>
+
+ 
+
+# This program will use functions to 
+
+# draw a house with windows and a door.
+
+# Functions to draw a sun, tree, and 
+
+# flowers will also be implemented.
+
+ 
+
+import turtle
+
+ 
+
+def drawTree(t, c, x, y):
+
+    # Draw a tree
+
+    # move to position
+
+    t.penup()
+
+    t.setpos(x, y) #Sets the position of the turtle
+
+    t.left(90)
+
+    t.pendown()
+
+ 
+
+    # draw trunk
+
+    t.color("brown")
+
+    t.pensize(8)
+
+    t.forward(80)
+
+    t.pensize(1)  
+
+    
+
+    # draw leaves
+
+    t.color( c )
+
+    t.begin_fill()
+
+    t.right(90)
+
+    t.circle(55)
+
+    t.end_fill()
+
+      
+
+def drawFlower(t, c, x, y):
+
+ 
+
+    # Draw a flower
+
+    
+
+    # move to position
+
+    t.penup()
+
+    t.setpos(x, y) #Sets the position of the turtle
+
+    t.setheading(90)
+
+    t.pendown()
+
+    
+
+    # draw stem
+
+    t.color("dark green")
+
+    t.forward(30)
+
+    
+
+    # draw petals
+
+    t.color( c )
+
+    t.begin_fill()
+
+    t.right(90)
+
+    t.circle(12)
+
+    t.end_fill()
+
+ 
+
+def drawSun(t, c, x, y):
+
+    
+
+    # move to position
+
+    t.penup()
+
+    t.setpos(x, y) #Sets the position of the turtle
+
+    t.setheading(270)
+
+    t.pendown()
+
+    
+
+    # draw the circle
+
+    t.color( c )
+
+    t.begin_fill()
+
+    t.right(90)
+
+    t.circle(20)
+
+    t.end_fill()
+
+ 
+
+    # draw star
+
+    t.setpos(x- (x/1.75), y -(y/12))
+
+    for n in range(40):
+
+        t.forward(60)
+
+        t.left(130)
+
+ 
+
+def drawWindow(t, c, x, y):
+
+    # draw one window
+
+    t.penup()
+
+    t.setpos(x, y) #Sets the position of the turtle
+
+    t.setheading(0)
+
+    t.pendown()
+
+ 
+
+    t.color(c)
+
+    
+
+    t.begin_fill()      
+
+    for side in range(2):
+
+        t.forward(10)
+
+        t.left(90)
+
+        t.forward(20)
+
+        t.left(90)
+
+    t.end_fill()
+
+ 
+
+def drawDoor(t, c, x, y):
+
+    # draw one door
+
+    t.penup()
+
+    t.setpos(x, y) #Sets the position of the turtle
+
+    t.setheading(0)
+
+    t.pendown()
+
+ 
+
+    t.color(c)
+
+    
+
+    t.begin_fill()      
+
+    for side in range(2):
+
+        t.forward(20)
+
+        t.left(90)
+
+        t.forward(50)
+
+        t.left(90)
+
+    t.end_fill()
+
+    
+
+    
+
+def drawHouse(t, c, x, y):
+
+    # draw the frame of the house
+
+    t.penup()
+
+    t.setpos(x, y) #Sets the position of the turtle
+
+    t.setheading(270)
+
+    t.pendown()
+
+ 
+
+    t.color(c)
+
+    
+
+    t.begin_fill()      
+
+    for side in range(4):
+
+        t.forward(100)
+
+        t.left(90)
+
+    t.end_fill()
+
+    
+
+    t.color("gray")
+
+    t.left(90 + 60)
+
+    t.begin_fill()
+
+    for side in range(2):
+
+        t.forward(100)
+
+        t.right(120)    
+
+    t.end_fill()
+
+ 
+
+def main():
+
+    dali = turtle.Turtle()
+
+    dali.speed(10)
+
+    dali.hideturtle()
+
+ 
+
+    print("Home Sweet Home")
+
+    drawTree(dali, "green", 130, -50)
+
+    drawHouse(dali, "red", 0, 0)
+
+    drawDoor(dali, "yellow", 40, -99)
+
+    drawWindow(dali, "white", 20, -30)
+
+    drawWindow(dali, "white", 70, -30)
+
+    drawWindow(dali, "white", 20, -80)
+
+    drawWindow(dali, "white", 70,-80)
+
+    drawSun(dali, "gold", -50, 90)
+
+    drawFlower(dali, "orange", 160, -75)
+
+    drawFlower(dali, "red", 125, -85)
+
+    drawFlower(dali, "hotpink", 165, -95)
+
+    drawFlower(dali, "yellow", 145, -90)
+
+ 
+
+main()
+
+ 
