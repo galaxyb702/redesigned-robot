@@ -1,0 +1,95 @@
+# Option 1 - Online Shopping Order
+
+# <student's first and last name>
+
+# <the date>
+
+ 
+
+# This program asks the user for the name and price of three
+
+# items purchased online and to calculate the total cost including
+
+# tax and shipping.
+
+ 
+
+def main():
+
+ 
+
+    print("Time to shop Etsy!")
+
+ 
+
+    # Assign values for tax and shipping
+
+    taxPercent = 0.065      # 6.5% sales tax
+
+    shipping = 5.99
+
+ 
+
+    # Ask user for input of 3 items and their price
+
+    itemName1 = input("What is your first item?" )
+
+    itemPrice1 = float(input("How much does the first item cost?" ))
+
+    
+
+    itemName2 = input("What is your second item?" )
+
+    itemPrice2 = float(input("How much does the second item cost?" ))
+
+ 
+
+    itemName3 = input("What is your third item?" )
+
+    itemPrice3 = float(input("How much does the third item cost?" ))
+
+ 
+
+    # Calculate subtotal, tax, and total cost with shipping
+
+    subTotal = itemPrice1 + itemPrice2 + itemPrice3
+
+    tax = subTotal * taxPercent
+
+    orderTotal = subTotal + tax + shipping
+
+ 
+
+    # Print results
+
+    print("")
+
+    print("Your order:")
+
+    print("")
+
+    print("Item                       Cost")
+
+    print(itemName1 + "        $" + str(itemPrice1))
+
+    print(itemName2 + "        $" + str(itemPrice2))
+
+    print(itemName3 + "        $" + str(itemPrice3))
+
+    print("-------------------------------")
+
+    print("     Subtotal:            $" + str(subTotal))
+
+    print("     Tax:                 $" + str(tax))
+
+    print("     Shipping:            $" + str(shipping))
+
+    print("     Order total:         $" + str(orderTotal))
+
+    print("")
+
+    print("Thank you for shopping!")
+
+ 
+
+main()
