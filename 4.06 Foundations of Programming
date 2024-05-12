@@ -1,0 +1,121 @@
+# This program ask the user to pick categories for
+
+# their ideal vacation. Based on the input, a destination
+
+# is recommended.
+
+ 
+
+# Note: Possible expansion of this program would be to add
+
+# more destinations based on different combinations of
+
+# the user's picks. Other input to request could include
+
+# price range, number of people, and age range of people
+
+ 
+
+def main():
+
+ 
+
+    # Assign club name and print welcome message
+
+ 
+
+    print("Let's pick a vacation destination!")    
+
+ 
+
+    # Ask user for input on vacation preferences
+
+    firstName = input("What is your first name? ")
+
+    landOrWater = input("Do you want to be on land or water? Enter l or w. ")
+
+    adventOrRelax = input("Do you want an adventure or relaxation? Enter a or r. ")
+
+    domesticOrInternational = input("Do you want to stay domestic or travel internationally? Enter d or i. ")
+
+ 
+
+    # Print results
+
+    print("")
+
+    print(firstName + ", thank you for your selections!")
+
+    print("")
+
+    print("You said your ideal vacation would be ")
+
+ 
+
+    if(landOrWater == "l"):
+
+        print("on solid land, ")
+
+    elif(landOrWater == "w"):
+
+        print("on wavy water, ")
+
+ 
+
+    if(adventOrRelax == "a"):
+
+        print("looking for an adventure, ")
+
+    elif(adventOrRelax == "r"):
+
+        print("requesting relaxation, ")
+
+ 
+
+    if(domesticOrInternational == "d"):
+
+        print("and stay close to home. ")
+
+    elif(domesticOrInternational == "i"):
+
+        print("and traveling abroad. ")
+
+ 
+
+    print("")
+
+    print("The vacation destination recommended is ")
+
+ 
+
+    if(landOrWater == "w" and domesticOrInternational == "i"):
+
+        print("to explore the Australian Reefs in an undersea ship!")
+
+        print("")
+
+    elif(adventOrRelax == "a" and domesticOrInternational == "i"):
+
+        print("zip lining in Mexico!")
+
+        print("")
+
+    elif(landOrWater == "w"):
+
+        print("a cruise to Alaska.")
+
+    elif(adventOrRelax == "r" and landOrWater == "l"):
+
+        print("get cozy at a cabin in the Smokey Mountains.")
+
+        print("")
+
+    else:
+
+        print("plan a picnic or go to a movie close to home.")
+
+ 
+
+main()
+
+ 
