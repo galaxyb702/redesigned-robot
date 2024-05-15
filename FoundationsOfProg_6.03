@@ -1,0 +1,77 @@
+# <student's first and last name>
+# <the date>
+ 
+# This program will simulate playing a game
+# of Rock, Paper, Scissors between two people.
+ 
+from random import *
+ 
+def randomRPS():
+    # This function will choose either rock, paper, or scissors.
+    # Note: Using random is optional. This function shows an example
+    # of random if a student chooses to use it. Most are likely to
+    # have two players and ask each for input. 
+ 
+    choice = randint(1, 3)
+    if( choice == 1):
+        computer = "R"
+    elif( choice == 2):
+        computer = "P"
+    else:
+        computer = "S"
+    return computer
+ 
+def playerRPS():
+    # This function asks the player choose rock, paper, or scissors.
+ 
+    pick = input("Please select [R]ock, [P]aper, or [S]issors. ")
+    while( not(pick == "R" or pick == "P" or pick == "S") ):
+        print ("Please retype your choice.")
+        pick = input("Please select [R]ock, [P]aper, or [S]issors. ")
+ 
+    return pick
+ 
+def pickWinner(player, computer):
+    # This function decides who won this round of Rock, Paper, Scissors.
+ 
+    if(computer == player):
+        print("This round is a tie!")
+    elif(computer == "R" and player == "P"):
+        print("You win this round!")
+    elif(computer == "R" and player == "S"):
+        print("Your opponent wins this round!")
+    elif(computer == "P" and player == "R"):
+        print("Your opponent wins this round!")
+    elif(computer == "P" and player == "S"):
+        print("You win this round!")
+    elif(computer == "S" and player == "P"):
+        print("Your opponent wins this round!")
+    else:
+        print("You win this round!")
+ 
+def main():
+ 
+    print("Let's play Rock, Paper, Scissors!")
+    print("R is rock.")
+    print("P is paper.")
+    print("S is scissors.")
+    print("")
+ 
+    answer = "Y"
+ 
+    while( not( answer == "N" or answer == "n") ):
+ 
+        playerChoice = playerRPS()
+        computerChoice = randomRPS()
+ 
+        print("You picked: " + playerChoice)
+        print("Opponent picked: " + computerChoice)
+ 
+        pickWinner(playerChoice, computerChoice)
+ 
+        print("")
+        answer = input("Do you want to play again? (Y or N) ")
+ 
+    print( "Thank you for playing!")
+ 
+main()
