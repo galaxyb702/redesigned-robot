@@ -4,13 +4,11 @@ import time
 rooms = {
     'hallway': {
         'description': 'You are in a dimly lit hallway. There are doors to the east and west.',
-        'exits': {'east': 'kitchen', 'west': 'living_room'},
-        'puzzle': "There is a locked door here. Maybe there's something in the kitchen that can help you unlock it."
+        'exits': {'east': 'kitchen', 'west': 'living_room'}
     },
     'kitchen': {
         'description': 'You are in a messy kitchen. There is a fridge and a table here.',
-        'exits': {'west': 'hallway'},
-        'puzzle_item': 'key'
+        'exits': {'west': 'hallway'}
     },
     'living_room': {
         'description': 'You are in a cozy living room. There is a TV and a couch here.',
@@ -21,8 +19,6 @@ rooms = {
 # Function to display room description
 def display_room(room):
     print(rooms[room]['description'])
-    if 'puzzle' in rooms[room]:
-        print(rooms[room]['puzzle'])
     time.sleep(1)
 
 # Main game loop
@@ -44,14 +40,6 @@ def play_game():
             display_room(current_room)
         else:
             print('You cannot go that way!')
-
-        # Check for puzzle solution
-        if current_room == 'hallway' and 'puzzle_item' in rooms['kitchen'] and rooms['kitchen']['puzzle_item'] in rooms['hallway']:
-            print("There's a key in the kitchen! Would you like to search for it?")
-            choice = input('Type "search" to search or any other key to ignore: ').lower()
-            if choice == 'search':
-                print("You found the key in the kitchen! You can now unlock the door in the hallway.")
-                del rooms['kitchen']['puzzle_item']
 
 # Start the game
 play_game()
