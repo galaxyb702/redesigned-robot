@@ -57,6 +57,11 @@ def is_game_over(board):
     return True
 
 def main():
+    print("Welcome to 2048!")
+    print("Slide the tiles with 'up', 'down', 'left', or 'right' arrow keys.")
+    print("Join the numbers and get to the 2048 tile!")
+    print("Good luck!\n")
+    
     board = initialize_board()
     while True:
         display_board(board)
