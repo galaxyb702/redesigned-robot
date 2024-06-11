@@ -10,9 +10,14 @@ data = {
 }
 
 df = pd.DataFrame(data)
+# Assuming the file name is 'house_medals.csv'
+df = pd.read_csv('house_medals.csv')
 
 # Find the row with the maximum sports medals
 max_sports_row = df.loc[df['Sports'].idxmax()]
 
 # Display the result
 print(f"The house with the maximum sports medals is {max_sports_row['HouseNames']} with {max_sports_row['Sports']} medals.")
+
+
+
