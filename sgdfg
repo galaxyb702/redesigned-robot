@@ -1,0 +1,18 @@
+import pandas as pd
+
+# Creating a DataFrame manually based on the data provided
+data = {
+    'id': [1, 2, 3, 4],
+    'HouseNames': ['Red', 'Ylw', 'Blue', 'Green'],
+    'Sports': [9, 8, 2, 1],
+    'Arts': [2, 4, 3, 2],
+    'Total': [11, 12, 5, 3]
+}
+
+df = pd.DataFrame(data)
+
+# Find the row with the maximum sports medals
+max_sports_row = df.loc[df['Sports'].idxmax()]
+
+# Display the result
+print(f"The house with the maximum sports medals is {max_sports_row['HouseNames']} with {max_sports_row['Sports']} medals.")
