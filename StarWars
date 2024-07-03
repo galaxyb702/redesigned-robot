@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>
+      Star Wars
+    </title>
+</head>
+<body>
+    <header>
+        <h1>Movie Review Website</h1>
+    </header>
+
+    <main>
+        <section id="review">
+            <h2>Star Wars</h2>
+            <p><strong>Author:</strong> George Lucas</p>
+            <img src="https://m.media-amazon.com/images/M/MV5BOTAzODEzNDAzMl5BMl5BanBnXkFtZTgwMDU1MTgzNzE@._V1_.jpg" alt="Star Wars">
+            
+            <article>
+                <h3>Review</h3>
+                <p>This is where the book review content goes. Describe the plot, characters, writing style, and your thoughts on the book.</p>
+            </article>
+
+            <aside>
+                <h3>Rating</h3>
+                <p>⭐⭐⭐⭐☆</p> <!-- Example of a 4-star rating -->
+            </aside>
+
+            <footer>
+                <p><strong>Reviewer:</strong> Reviewer Sean Selimovic</p>
+                <p><strong>Date:</strong> 3.July.2024</p>
+            </footer>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Movie Review Website</p>
+       
+    </footer>
+</body>
+</html>
