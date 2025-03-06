@@ -16,42 +16,33 @@ greet()
 
  
 
-def main():
+import csv
 
-    import csv
-
- 
-
-    time = input("Please enter a time to search")
-
-    found = False
-
-    with open('sun_data.csv', 'rt') as f:
-
-        reader = csv.reader(f, delimiter=',') 
-
-        for row in reader:
-
-            for field in row:
-
-                if field == time:
-
-                    found = True
-
-                    
-
-    if found:
-
-        print("Yes, " + time + " is in the database")
-
-        print("Would you like to race at that time?")
-
-        print("")
-
-        print("Thank you, we have scheduled you to run at 600.")
-
-    else:
-
-        print("No, the sun doesn't rise at that time")
-
+def main(): 
+   found = False
+   i=0
+   loc =   "  "
+   date=""
+   matched_row = ""
+   time = input("please enter a time to search") 
+   with open("sun_data.csv","rw") as f:
+      reader = csv.reader(f,delimiter=",")
+	  for row in reader:
+	     i=i+1
+	     print(row)
+		 for field in row:
+		 #date=field
+		   if field == time:
+			   found = True 
+			   matched_row = row
+			   #date =row[i]
+			   #loc=row[i]
+			   break    
+   if found:
+	  print (" yes   "+ time+"is in the data base")
+	  print (" would you like to jog at that time")
+	  print (" we have scheduled your time on "+ matched_row[0] ) 
+	  
+   else: 
+	  print (" no the sun does not rise at this time")
 main()
