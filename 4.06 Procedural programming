@@ -84,11 +84,7 @@ def search():
 
             print("Yes, " + player + " is in the database")
 
-            print("Would you like to race at that time?")
-
-            print("")
-
-            print("Thank you, we have scheduled you to run at 600.")
+           
 
         else:
 
@@ -100,43 +96,42 @@ def findPlayerNumber():
 
     import csv
 
- 
+    player=input("enter name of player")
 
     with open("battle_royale.csv") as csvfile:
 
         readCSV = csv.reader(csvfile, delimiter=",")
 
-        players = []
-
-        numbers = []
-
+        matched_row=""
+        player1=""
+		num=""
         for row in readCSV:
+		    for field in row:
+			 if field == player:
+               matched_row=row
+               player1 = row[1]
 
-            player = row[1]
-
-            number = row[2]
-
- 
-
-            players.append(player)
-
-            numbers.append(number)
+               num = row[2]
 
  
 
-        print(players)
-
-        print(numbers)
+            
 
  
 
-        whatPlayer = input("What player do you wish to know the number of?:")
+        print(player1)
 
-        playersName = players.index(whatPlayer)
+        print(num)
 
-        theNumber = numbers[playersName]
+ 
 
-        print(whatPlayer+ (str(" is number: ") +theNumber))
+        #whatPlayer = input("What player do you wish to know the number of?:")
+
+        #playersName = players.index(whatPlayer)
+
+        #theNumber = numbers[playersName]
+
+        print(player1+ (str(" is number: ") +num))
 
  
 
