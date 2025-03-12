@@ -1,0 +1,59 @@
+Pseudocode Sample
+
+ 
+
+print welcome statement to user
+
+print menu for user
+
+1: Find pre-registered player
+
+2: Find number of a specific player
+
+3: Print list of players
+
+4: Quit/Log Out
+
+ 
+
+If searching for player, go to search function
+
+If searching for specific player number, go to find player function
+
+If user needs a list of players, go to print list function
+
+ 
+
+    
+
+Search function
+
+import csv
+
+if found, print that player is in the database
+
+else, print there is no player by that name
+
+ 
+
+find player function
+
+import csv
+
+ 
+
+print, what player do you wish to know the number of?
+
+if found, print the player and the number
+
+ 
+
+Print list of players
+
+import csv
+
+print players
+
+ 
+
+close the csv file
