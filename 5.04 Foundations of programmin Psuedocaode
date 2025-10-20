@@ -1,0 +1,47 @@
+Superhero program for 5.04
+
+ 
+
+Define a Superhero class. Start with the code provided.
+
+ 
+
+initializer method: add the attributes:
+
+name
+strength points
+motto
+strength – at what is the superhero good?
+weakness – what will harm the superhero?
+challenge – what challenging situation will the hero face?
+ 
+
+add Strength Points function
+
+takes a parameter for points
+adds the points to the strengthPts attribute
+ 
+
+saveWorld function
+
+no parameters needed
+using elif, check if the challenge attribute matches different situations and print a message for the outcome
+Sinister Syntax
+meteor
+runaway train
+ 
+
+Main program
+
+instantiate a new superhero (captainPy), initialize values
+name: Captain Python
+strength points: 21
+motto: Batteries Included
+set strength to "exterminating logic bugs"
+set weakness to "logic bugs"
+set challenge to "Sinister Syntax"
+ 
+
+Output
+
+print messages telling about the superhero and the adventures. Use the objects attributes to print values
