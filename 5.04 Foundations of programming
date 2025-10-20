@@ -1,0 +1,99 @@
+# This program defines the Superhero class
+
+# and creates an instance of that class.
+
+ 
+
+class Superhero:
+
+    """ Superhero class represents the facts related to a superhero. """
+
+ 
+
+    def __init__(self, name = "", strengthPts = 0, motto = "", strength = "", weakness = "", challenge = ""):
+
+        """ Create a new superhero with a name and other attributes. """
+
+        self.name = name
+
+        self.strengthPts = strengthPts
+
+        self.motto = motto
+
+        self.strength = strength
+
+        self.weakness = weakness
+
+        self.challenge = challenge
+
+ 
+
+    def addStrengthPts(self, points):
+
+        """ Adds points to the superhero's strength. """
+
+        self.strengthPts = self.strengthPts + points     
+
+ 
+
+    def saveWorld(self):
+
+        """ Will print the reaction the superhero takes when facing certain challenges. """
+
+        if(self.challenge == "Sinister Syntax"):
+
+            print("The villain is defeated when he falls into an infinite loop!")
+
+        elif(self.challenge == "meteor"):
+
+            print ("The meteor is destroyed by a boulder launched at the precise angle and speed to smash it. The program saved the day to perform the calculations!")  
+
+        elif(self.challenge == "runaway train"):
+
+            print("The train is slowed after quick typing of code to control the fuel supply for the train.")
+
+        else:
+
+            print("The superhero doesn't have a plan for this challenge.")
+
+ 
+
+def main():
+
+ 
+
+    # Create the superhero and set the attribute values
+
+    captainPy = Superhero("Captain Python", 21, "Batteries Included")
+
+    captainPy.strength = "exterminating logic bugs"
+
+    captainPy.weakness = "logic bugs"
+
+    captainPy.challenge = "Sinister Syntax"
+
+ 
+
+    # Print about the superhero
+
+    print("Let me tell you about my superhero.")
+
+    print("Her name is " + captainPy.name + " and her super power is " + captainPy.strength + ".")
+
+    print("When facing the villain " + captainPy.challenge + ", she shouts out her motto " )
+
+    print(captainPy.motto + "! Then rushes to save the world!")
+
+    captainPy.saveWorld()
+
+    print("This heroic action earns her 100 strength points.")
+
+    captainPy.addStrengthPts(100)
+
+    print(captainPy.name + " now has " + str(captainPy.strengthPts) + " points and has saved the day!")
+
+ 
+
+main() 
+
+ 
