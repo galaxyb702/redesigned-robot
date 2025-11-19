@@ -1,0 +1,69 @@
+# Answer Key Lesson 2.03
+
+# <student's first and last name>
+
+# <the date>
+
+ 
+
+def main():
+
+    print("*************************")   
+
+    print("Welcome to the Sock Shop!")
+
+                print("*************************")
+
+    print("")
+
+    yourBudget = int(input("What is your current budget amount?"))
+
+                freeGift = 200 - yourBudget
+
+    
+
+    if yourBudget < 25:
+
+                                print("Your current budget is $" + str(yourBudget) + ".")
+
+                                print("We specialize in top of the line socks and require a minimum purchase of $25")
+
+                                print("")
+
+                                print("Sorry, you must have $" + str(25-yourBudget) + " more in your budget.") 
+
+        print("If you spend at least $200 you qualify for a free gift!")
+
+    else: 
+
+        if (yourBudget > 25 and yourBudget < 200 ):
+
+                                                print("Your budget is $" +str(yourBudget) +".")
+
+                                                print("If you spend $" + str(freeGift) + " more,")
+
+                                                print("you qualify for a free gift!")
+
+            print("With that in mind, we recommend")
+
+                                                print("our Sparkle Toes Socks, made with 100% unicorn hair.")
+
+            print("You won’t want to pass up this dazzling pair.")
+
+                                                print("")
+
+                                                print("*************************")   
+
+                                print("Thanks for shopping")
+
+                                                print("*************************")
+
+        else:
+
+            print("Your budget is $" +str(yourBudget))
+
+                                                print("All orders over $200 qualify for a free gift. Happy shopping! ")
+
+ 
+
+main()
