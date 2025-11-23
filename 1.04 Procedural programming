@@ -1,0 +1,16 @@
+def main(): 
+ 
+    name = input("What is your name?") 
+	
+    imp = input("Why do you think voting is important?") 
+	
+    age = int(input("What is your age?")) 
+    diff_age = 0
+    if age < 18:  
+	    diff_age = 18 - age
+ 
+
+    print("The reason you think voting is important is because " + imp) 
+    print("Good point! People can vote on many important issues including global warming, taxes, and social issues.") 
+    print("Since you are " + str(age) +" years old you will be able to vote in " + str(diff_age) +" years!")  
+main()
