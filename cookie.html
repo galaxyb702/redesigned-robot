@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cookie Animation</title>
+  <style>
+    /* Centers the canvas on the page */
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f0f0f0;
+    }
+    canvas {
+      border: 1px solid black;
+      background-color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 
+    Include the necessary libraries from public CDNs.
+    p5.js provides the core drawing framework.
+    p5.play.js provides sprite and animation functionality.
+  -->
+  <script src="cdnjs.cloudflare.com"></script>
+  <script src="cdn.jsdelivr.net"></script>
+
+
+  <!-- The corrected animation script goes here -->
+  <script>
+    // Use a single generic image placeholder URL since Code.org assets are private
+    var GENERIC_COOKIE_URL = "picsum.photos"; // A simple, publicly available image URL
+
+    var sprite;
+    var rightEdge, topEdge, leftEdge, bottomEdge; // Define edge sprites globally for scope
+
+    // p5.js function called once at the beginning
+    function setup() {
+      createCanvas(400, 400);
+      World.frameRate = 30;
+      
+      // Create sprite and set initial properties in setup
+      sprite = createSprite(200, 200);
+      sprite.addAnimation("face_cookie_1", GENERIC_COOKIE_URL);
+      sprite.addAnimation("cookie_1", GENERIC_COOKIE_URL);
+      sprite.addAnimation("face_cookie2_1", GENERIC_COOKIE_URL);
+      sprite.addAnimation("fortune_cookie_1", GENERIC_COOKIE_URL);
+      
+      sprite.velocityX = randomNumber(-5, 5);
+      sprite.velocityY = randomNumber(-5, 5);
+      sprite.scale = 0.8; // Increased scale for visibility of the placeholder image
+      sprite.setAnimation("face_cookie_1");
+      
+      // Create edge sprites
+      // In p5.play.js, these are actually predefined variables accessible if you include the library
+      rightEdge = createSprite(400, 200, 1, 400);
+      topEdge = createSprite(200, 0, 400, 1);
+      leftEdge = createSprite(0, 200, 1, 400);
+      bottomEdge = createSprite(200, 400, 400, 1);
+
+      // Make edges invisible
+      rightEdge.visible = false;
+      topEdge.visible = false;
+      leftEdge.visible = false;
+      bottomEdge.visible = false;
+    }
+
+    // p5.js function called repeatedly (looping)
+    function draw() {
+      background("white");
+      
+      // Use true/false to make the sprite rotate to face its current direction
+      // Note: rotateToDirection property might not behave as expected with a generic static image
+      sprite.rotateToDirection = true; 
+
+      // Bounce logic
+      sprite.bounceOff(rightEdge);
+      sprite.bounceOff(topEdge);
+      sprite.bounceOff(leftEdge);
+      sprite.bounceOff(bottomEdge);
+
+      // Change animations based on which edge it hits
+      // The visual change will simply be the same generic image reloaded as a new 'animation'
+      if (sprite.collide(rightEdge)) {
+        sprite.setAnimation("cookie_1");
+      }
+      if (sprite.collide(topEdge)) {
+        sprite.setAnimation("face_cookie_1");
+      }
+      if (sprite.collide(leftEdge)) {
+        sprite.setAnimation("face_cookie2_1");
+      }
+      if (sprite.collide(bottomEdge)) {
+        sprite.setAnimation("fortune_cookie_1");
+      }
+      
+      drawSprites();
+    }
+    
+    // Helper function for random numbers from Code.org
+    function randomNumber(min, max) {
+      return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+  </script>
+
+</body>
+</html>
