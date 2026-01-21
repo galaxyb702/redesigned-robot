@@ -1,0 +1,39 @@
+# Description:
+# A simple entertainment-based adventure game where the user
+# collects random items using loops, conditionals, and the random module.
+# ----------------------------------------
+import random
+import math
+print("Welcome to the Adventure Game!")
+print("Your goal is to collect 3 items to complete the level.\n")
+play_game = input("Do you want to play? (yes/no): ").lower()
+while play_game == "yes":
+    score = 0
+    items = ["Magic Sword", "Shield", "Potion", "Gold Coin", "Helmet"]
+    # Outer loop controls the level
+    while score < 3:
+        # Randomly choose an item
+        item_found = random.choice(items)
+        print("\nYou found a:", item_found)
+        choice = input("Do you want to collect it? (yes/no): ").lower()
+        # Nested decision logic
+        if choice == "yes":
+            score += 1
+            print("Item collected!")
+        elif choice == "no":
+            print("You skipped the item.")
+            continue
+        else:
+            print("Invalid input. Try again.")
+            continue
+        print("Current score:", str(score))
+        # Use break when goal is met
+        if score == 3:
+            break
+    # Use a math function
+    bonus = math.sqrt(score * 9)
+    print("\nLevel complete!")
+    print("Your final score is:", score)
+    print("Bonus points:", int(bonus))
+    play_game = input("\nDo you want to play again? (yes/no): ").lower()
+print("\nThanks for playing! Goodbye!")
