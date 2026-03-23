@@ -1,0 +1,61 @@
+# Answer Key Lesson 04.04
+
+# <student's first and last name>
+
+# <the date>
+
+ 
+
+# This program will ask user for their favorite Star
+
+# Wars character then check if it is on the programmer's
+
+# prewritten list and give a message accordingly.
+
+# The program ends by traversing and printing the programmer's
+
+# list of favorite characters.
+
+ 
+
+def main():
+
+ 
+
+    characters = ["Chewbacca", "Yoda", "Rey", "R2-D2", "Obi Wan Kenobi"]
+
+    
+
+    print("What is your favorite ")
+
+    print("Star Wars character?")
+
+ 
+
+    yourFav = input("Please enter your favorite Star Wars character. ")
+
+ 
+
+    for n in range( 0, len(characters) ):
+
+        if(yourFav == characters[n]):
+
+            print("Cool! We both like " + characters[n] +"!")
+
+            
+
+    print("")
+
+    print("Here are my top 5 favorites:" )
+
+ 
+
+    for n in range(0, len(characters) ):
+
+        print( str(n + 1) + "  " + characters[n] )
+
+ 
+
+main()
+
+ 
