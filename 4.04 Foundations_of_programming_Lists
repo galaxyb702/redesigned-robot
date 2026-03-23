@@ -15,7 +15,25 @@
 # The program ends by traversing and printing the programmer's
 
 # list of favorite characters.
+List of favorite Star Wars characters program 04.04
 
+#Input: 
+
+#create list called characters and assign five favorites (Chewbacca, Yoda, Rey, R2-D2, and Obi Wan Kenobi)
+#ask the user for their favorite Star Wars character and assign it to the variable "yourFav"
+#Processing
+
+#traverse the list (using a for loop) checking if the user's favorite is in my list.
+#if there is a match, print a message that we both like the same character
+ 
+
+#Output: 
+
+#print a message "Here are my top 5"
+#print the values in my list (including numbering them) using a for loop to traverse the list
+ 
+
+ 
  
 
 def main():
