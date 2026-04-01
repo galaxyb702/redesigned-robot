@@ -13,9 +13,58 @@
 # the user's picks. Other input to request could include
 
 # price range, number of people, and age range of people
+"""
+ Vacation Recommendation Pseudocode
+START PROGRAM
 
- 
+DISPLAY a welcome message to the user.
 
+PROMPT the user for their name and store it in firstName.
+
+PROMPT the user if they want Land or Water ("l" or "w") and store in landOrWater.
+
+PROMPT the user if they want Adventure or Relaxation ("a" or "r") and store in adventOrRelax.
+
+PROMPT the user if they want Domestic or International ("d" or "i") and store in domesticOrInternational.
+
+PHASE 1: Summarize User Choices
+
+IF landOrWater is "l" THEN print "on solid land."
+
+ELSE IF landOrWater is "w" THEN print "on wavy water."
+
+IF adventOrRelax is "a" THEN print "looking for adventure."
+
+ELSE IF adventOrRelax is "r" THEN print "requesting relaxation."
+
+IF domesticOrInternational is "d" THEN print "stay close to home."
+
+ELSE IF domesticOrInternational is "i" THEN print "traveling abroad."
+
+PHASE 2: Determine Recommendation
+
+IF the user wants Water AND International travel:
+
+DISPLAY "Australian Reefs in an undersea ship."
+
+ELSE IF the user wants Adventure AND International travel:
+
+DISPLAY "Zip lining in Mexico."
+
+ELSE IF the user wants Water:
+
+DISPLAY "A cruise to Alaska."
+
+ELSE IF the user wants Relaxation AND Land:
+
+DISPLAY "Cozy cabin in the Smokey Mountains."
+
+ELSE (for all other combinations):
+
+DISPLAY "A picnic or a movie close to home."
+
+END PROGRAM
+"""
 def main():
 
  
