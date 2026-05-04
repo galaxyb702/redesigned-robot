@@ -1,0 +1,93 @@
+Decode a message program for 05.02
+
+ 
+
+use the variable message – assign it the quote "Try not to become a man of success but rather try to become a man of value. -Albert Einstein"
+
+ 
+
+create a list variable for the encoded message that will start empty []
+
+create a variable for the decoded message, it will start blank ""
+
+ 
+
+using a for loop to traverse the message, encode each character to its ASCII value using the ord() function
+
+ 
+
+print the encoded message
+
+ 
+
+using a for loop, decode the message using the chr() function
+
+ 
+
+print the decoded message
+
+ 
+
+ 
+
+Program Code Sample: To run and test the program, copy the code below and paste into the Python IDLE located in the course.
+
+ 
+
+# Answer Key Lesson 05.02
+
+# <student's first and last name>
+
+# <the date>
+
+ 
+
+# This program will encode a message using the ASCII values
+
+# for the characters and display it to the screen. Then decode
+
+# the message for the user to read.
+
+ 
+
+def main():
+
+ 
+
+    message = "Try not to become a man of success but rather try to become a man of value. -Albert Einstein"
+
+    encodedMsg = []
+
+    decodedMsg = ""
+
+ 
+
+    # Encode the message to ASCII.
+
+    for m in message:
+
+        encodedMsg.append( ord(m) )
+
+ 
+
+    print("The encoded message: ")
+
+    print(encodedMsg)
+
+    print("")
+
+    
+
+    for e in encodedMsg:
+
+        decodedMsg = decodedMsg + chr( e )
+
+ 
+
+    print("The decoded message: ")
+
+    print(decodedMsg)
+
+ 
+
+main() 
