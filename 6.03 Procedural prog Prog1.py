@@ -41,6 +41,7 @@ def quiz(selection):
 			lscore = int(input("Quiz " + str(score) + "/5 - Enter your Language Arts score (0-100): "))
 			quizScore.append(lscore)
 	avg = average(quizScore)
+	print("Your average score for the last 5 quizzes is: " + str(avg))
 	if avg >= 90:
 		display(selection)
 	else:
