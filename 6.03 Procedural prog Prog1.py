@@ -2,6 +2,66 @@
 #4/15/2025
 #The purpose is Major Indescision (help students select their majors)
 
+"""
+Pseudocode for Major indecision.py
+
+- Start
+- Define function `menuSelection()`:
+  - Print numbered list of majors:
+    - 1 Engineering
+    - 2 Health and Clinical Sciences
+    - 3 Business Administration
+    - 4 Bio-Medical Sciences
+    - 5 Communications and Journalism
+  - Prompt user: "Type the number corresponding to the topic you want to look into"
+  - Read integer `selection`
+  - Call `quiz(selection)`
+
+- Define function `average(quizScore)`:
+  - Compute `total = sum(quizScore)`
+  - Compute `length = len(quizScore)`
+  - Return `avg = total / length`
+
+- Define function `quiz(selection)`:
+  - Initialize empty list `quizScore`
+  - Print "Please provide the last 5 quiz scores of your selected subject:"
+  - If `selection == 1`:
+    - Subject = "Math"
+  - Else if `selection == 2 or selection == 4`:
+    - Subject = "Biology"
+  - Else if `selection == 3 or selection == 5`:
+    - Subject = "Language Arts"
+  - For `i` from 1 to 5:
+    - Prompt: "Quiz " + str(i) + "/5 - Enter your {Subject} score (0-100): "
+    - Read integer `score`
+    - (Optional) Validate `score` is numeric and between 0 and 100; if invalid, re-prompt
+    - Append `score` to `quizScore`
+  - Compute `avg = average(quizScore)`
+  - If `avg >= 90`:
+    - Call `display(selection)`
+  - Else:
+    - Call `menuSelection()` (allow user to choose again)
+
+- Define function `display(selection)`:
+  - If `selection == 1`:
+    - Print detailed info about Engineering (career paths, skills, courses, salary, job growth)
+  - Elif `selection == 2`:
+    - Print detailed info about Health and Clinical Sciences
+  - Elif `selection == 3`:
+    - Print detailed info about Business Administration
+  - Elif `selection == 4`:
+    - Print detailed info about Bio-Medical Sciences
+  - Elif `selection == 5`:
+    - Print detailed info about Communications and Journalism
+  - After showing details, optionally exit or offer to return to menu
+
+- Define function `main()`:
+  - Call `menuSelection()`
+- Call `main()`
+- End
+
+"""
+
 def menuSelection():
 	print("1. Engineering")
 	print("2. Health and Clinical Sciences")
