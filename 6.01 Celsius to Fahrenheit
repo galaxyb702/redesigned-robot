@@ -1,23 +1,23 @@
 # PSEUDOCODE - Temperature Converter
 """START
 -- define a function called celsius_to_fahrenheit
-takes in one value (celsius)
-formula: fahrenheit = (celsius times 9/5) plus 32
-return fahrenheit
+      takes in one value (celsius)
+      formula: fahrenheit = (celsius times 9/5) plus 32
+      return fahrenheit
 -- define a function called celsius_to_kelvin
-takes in one value (celsius)
-formula: kelvin = celsius plus 273.15
-return kelvin
+      takes in one value (celsius)
+      formula: kelvin = celsius plus 273.15
+      return kelvin
 -- make a list of test values to try:
-test values = [0, 100, -40, 37, 23.5, -10.5]
+      test values = [0, 100, -40, 37, 23.5, -10.5]
 -- for each value in the test list:
-call celsius_to_fahrenheit with the value
-call celsius_to_kelvin with the value
-print the original celsius value
-print the fahrenheit result
-print the kelvin result
-print a separator line so its easier to read
-END"""
+      call celsius_to_fahrenheit with the value
+      call celsius_to_kelvin with the value
+      print the original celsius value
+      print the fahrenheit result
+      print the kelvin result
+      print a separator line so its easier to read
+    END"""
 
 # Name:Rashmi Ramesh
 # Date: June 6, 2026
