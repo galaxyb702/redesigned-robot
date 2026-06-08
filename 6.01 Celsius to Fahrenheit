@@ -26,12 +26,14 @@ END"""
 # values to make sure it works right.
 # function that converts celsius to fahrenheit
 def celsius_to_fahrenheit(celsius):
-fahrenheit = (celsius * 9/5) + 32
-return fahrenheit
+    fahrenheit = (celsius * 9/5) + 32
+    return fahrenheit
+
 # function that converts celsius to kelvin
 def celsius_to_kelvin(celsius):
-kelvin = celsius + 273.15
-return kelvin
+    kelvin = celsius + 273.15
+    return kelvin
+
 # my test values - integers, floats, negatives, positives
 test_values = [0, 100, -40, 37, 23.5, -10.5]
 # header for the output
@@ -39,9 +41,9 @@ print("===== Temperature Converter =====")
 print()
 # loop through all the test values and print the results
 for temp in test_values:
-fahrenheit_result = celsius_to_fahrenheit(temp)
-kelvin_result = celsius_to_kelvin(temp)
-print(f"Celsius: {temp} C")
-print(f"Fahrenheit: {fahrenheit_result:.2f} F")
-print(f"Kelvin: {kelvin_result:.2f} K")
-print("---------------------------------")
+    fahrenheit_result = celsius_to_fahrenheit(temp)
+    kelvin_result = celsius_to_kelvin(temp)
+    print(f"Celsius: {temp} C")
+    print(f"Fahrenheit: {fahrenheit_result:.2f} F")
+    print(f"Kelvin: {kelvin_result:.2f} K")
+    print("---------------------------------")
