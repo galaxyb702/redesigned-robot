@@ -1,0 +1,47 @@
+# PSEUDOCODE - Temperature Converter
+"""START
+-- define a function called celsius_to_fahrenheit
+takes in one value (celsius)
+formula: fahrenheit = (celsius times 9/5) plus 32
+return fahrenheit
+-- define a function called celsius_to_kelvin
+takes in one value (celsius)
+formula: kelvin = celsius plus 273.15
+return kelvin
+-- make a list of test values to try:
+test values = [0, 100, -40, 37, 23.5, -10.5]
+-- for each value in the test list:
+call celsius_to_fahrenheit with the value
+call celsius_to_kelvin with the value
+print the original celsius value
+print the fahrenheit result
+print the kelvin result
+print a separator line so its easier to read
+END"""
+
+# Name:Rashmi Ramesh
+# Date: June 6, 2026
+# Description: This program converts a celsius temperature into
+# fahrenheit and kelvin. it tests a bunch of different
+# values to make sure it works right.
+# function that converts celsius to fahrenheit
+def celsius_to_fahrenheit(celsius):
+fahrenheit = (celsius * 9/5) + 32
+return fahrenheit
+# function that converts celsius to kelvin
+def celsius_to_kelvin(celsius):
+kelvin = celsius + 273.15
+return kelvin
+# my test values - integers, floats, negatives, positives
+test_values = [0, 100, -40, 37, 23.5, -10.5]
+# header for the output
+print("===== Temperature Converter =====")
+print()
+# loop through all the test values and print the results
+for temp in test_values:
+fahrenheit_result = celsius_to_fahrenheit(temp)
+kelvin_result = celsius_to_kelvin(temp)
+print(f"Celsius: {temp} C")
+print(f"Fahrenheit: {fahrenheit_result:.2f} F")
+print(f"Kelvin: {kelvin_result:.2f} K")
+print("---------------------------------")
