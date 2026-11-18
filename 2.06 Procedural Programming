@@ -1,0 +1,222 @@
+Output message: Welcome to Jet Setter Outfitters! Where your next vacation outfit is only four questions away.
+
+#Pseudocode
+
+Input: 
+
+Ask for user’s name
+Ask for user’s destination
+As for user’s favorite color
+Ask for user’s gender
+Calculations:
+
+If user selects Aspen, gender is male, and favorite color is beige, then make the following suggestions:
+Beige Ski Cap
+Beige Premium Puffer Jacket
+Beige Skinny Jeans
+Beige Wedge Heel Booties
+Beige Woolen Socks
+Use else/if to determine if the user’s requirements fit the rest of the choices
+
+ 
+
+Output:
+
+Print recommendations based on selections
+Print goodbye 
+
+# Answer Key Lesson 2.06
+
+# <student's first and last name>
+
+# <the date>
+
+ 
+
+name = input("What is your name?")
+
+destination = input("Where will you be traveling to? Type '1' for Aspen, '2' for Miami, or '3' for NYC")
+
+color = input("Please select your favorite color: Type '1' for Beige or '2' for Black")
+
+gender = input("Please select a gender: Type '1' for Male or '2' for Female")
+
+ 
+
+print("Welcome to Jet Setter Outfitters!") 
+
+print("Where your next vacation outfit is only four questions away.") 
+
+ 
+
+if destination == "1":
+
+    if gender == "2" and color == "1":
+
+        print("Beige Ski Cap")
+
+        print("Beige Premium Puffer Jacket")
+
+        print("Beige Skinny Jeans")
+
+        print("Beige Wedge Heel Booties")
+
+        print("Beige Woolen Socks")
+
+    else:
+
+        if gender == "2" and color == "2":
+
+            print("Black Ski Cap")
+
+                    print("Black Premium Ski Jacket")
+
+                    print("Black Jeans")
+
+                    print("Black Weatherproof Boots")
+
+                    print("Black Woolen Socks")
+
+    if gender == "1" and color == "1":
+
+        print("Beige Ski Cap")
+
+                print("Beige Premium Ski Jacket")
+
+                print("Beige Jeans")
+
+                print("Beige Weatherproof Boots")
+
+                print("Beige Woolen Socks")
+
+    else:
+
+        if gender == "1" and color == "2":
+
+            print("Black Ski Cap")
+
+            print("Black Premium Ski Jacket")
+
+            print("Black Jeans")
+
+            print("Black Weatherproof Boots")
+
+            print("Black Woolen Socks")
+
+ 
+
+if destination == "2":
+
+    if gender == "2" and color == "1":
+
+        print("Beige Tank Top")
+
+        print("Beige Lightweight Jacket")
+
+        print("Beige Skinny Jeans")
+
+        print("Beige Wedges")
+
+        print("Beige Crossbody Purse")
+
+    else:
+
+        if gender == "2" and color == "2":
+
+            print("Black Cap")
+
+                    print("Black Premium Jacket")
+
+                    print("Black Jeans")
+
+                    print("Black Boots")
+
+                    print("Black Socks")
+
+    if gender == "1" and color == "1":
+
+        print("Beige Cap")
+
+                print("Beige Jacket")
+
+                print("Beige Jeans")
+
+                print("Beige Boots")
+
+                print("Beige Socks")
+
+    else:
+
+        if gender == "1" and color == "2":
+
+            print("Black Cap")
+
+            print("Black Jacket")
+
+            print("Black Jeans")
+
+            print("Black Boots")
+
+            print("Black Socks")
+
+            
+
+if destination == "3":
+
+    if gender == "2" and color == "1":
+
+        print("Beige Tank Top")
+
+        print("Beige Lightweight Jacket")
+
+        print("Beige Skinny Jeans")
+
+        print("Beige Wedges")
+
+        print("Beige Crossbody Purse")
+
+    else:
+
+        if gender == "2" and color == "2":
+
+            print("Black Cap")
+
+                    print("Black Premium Jacket")
+
+                    print("Black Jeans")
+
+                    print("Black Boots")
+
+                    print("Black Socks")
+
+    if gender == "1" and color == "1":
+
+        print("Beige Cap")
+
+                print("Beige Jacket")
+
+                print("Beige Jeans")
+
+                print("Beige Boots")
+
+                print("Beige Socks")
+
+    else:
+
+        if gender == "1" and color == "2":
+
+            print("Black Cap")
+
+            print("Black Jacket")
+
+            print("Black Jeans")
+
+            print("Black Boots")
+
+            print("Black Socks")
+
+                    
+
+print("You’re going to look fabulous. Enjoy your trip!")
+
+print("===============================================")
